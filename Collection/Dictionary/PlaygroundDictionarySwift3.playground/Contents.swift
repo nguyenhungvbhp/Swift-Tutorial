@@ -42,3 +42,21 @@ print(total)
 
 let goodPay = records.filter{($0.last as! Int) > 20}
 print(goodPay)
+
+
+class Teprature {
+    
+   private var celsius: Float = 0.0
+   private var fahrenheit: Float {
+        get {
+            return celsius * 1.8 + 32.0
+        }
+        
+        private set {
+            celsius = (newValue - 32)/1.8
+        }
+    }
+}
+
+var temp = Teprature()
+temp.fahrenheit = 89
